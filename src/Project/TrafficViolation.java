@@ -63,6 +63,28 @@ public class TrafficViolation extends vehicle{
         System.out.println("Fine Amount: $"+fineAmount);
 
     }
+     // check function
+
+    public String CheckVehicleStatus(vehicle v,boolean status) {
+        if (v.vehicleId != null) {
+            if (v.vehicleId .equals(getVehicleId())) {
+                System.out.println("vehicle found");
+                if (status) {
+                    System.out.println("Of course there is a violation");
+                    System.out.println("Violation Type: "+v.violationType);
+                }
+                else {
+                    System.out.println("Certainly there is no violation");
+                    System.out.println("Vehicle ID: " + v.vehicleId);
+                }
+            }
+            else {
+                System.out.println("vehicle not found");
+                return v.vehicleId ;
+            }
+        }
+         return "THANK YOU";
+    }
 
 }
 
